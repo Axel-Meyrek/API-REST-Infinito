@@ -1,7 +1,7 @@
 //IMPORTACIONES
-import mongoose from "mongoose";
+import {Schema} from "mongoose";
 
-const SchemaQueja = mongoose.Schema({
+const SchemaQueja = new Schema({
     queja: String,
     required: true
 })
