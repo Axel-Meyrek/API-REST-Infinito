@@ -1,6 +1,6 @@
 //IMPORTACIONES
 import express from 'express'
-import {lodingNotes, sendNote} from '../controllers/controllerNotes.js'
+import {lodingNotes, sendNote, deleteNote} from '../controllers/controllerNotes.js'
 //CREAR EL ROUTER
 const routerNotes = express.Router()
 
@@ -8,6 +8,8 @@ const routerNotes = express.Router()
 routerNotes.get('/', lodingNotes)
 
 routerNotes.post('/', sendNote)
+
+routerNotes.delete('/:id', deleteNote)
 
 //Exportaciones
 export default routerNotes
